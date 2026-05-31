@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagerConsoleApp.Classes
 {
-    internal class Documents : IDocumentAdminAccess, IDocumentAccessEmpolyeeAccess
+    public class Documents : IDocumentAdminAccess, IDocumentAccessEmployeeAccess
     {
-        public void CreateDocument()
+        public string CreateDocument(string documentName)
         {
-            Console.WriteLine("admin created a document");
+            Console.WriteLine($"admin created a document: {documentName}");
+            return documentName;
         }
 
         public void DeleteDocument()
@@ -33,5 +34,7 @@ namespace EmployeeManagerConsoleApp.Classes
         {
             Console.WriteLine("admin updated a document");
         }
+
+        
     }
 }

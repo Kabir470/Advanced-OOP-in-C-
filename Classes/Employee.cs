@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagerConsoleApp.Classes
 {
-    public class Employee : IDocumentAccessEmpolyeeAccess
+    public class Employee : IDocumentAccessEmployeeAccess
     {
         private string? documentName;
 
@@ -15,6 +15,11 @@ namespace EmployeeManagerConsoleApp.Classes
         {
             this.documentName = documentName;
             return this.documentName;
+        }
+
+        public void ReadDocumentEmployee()
+        {
+            Console.WriteLine("Employee is reading the document: " + documentName);
         }
     }
 }

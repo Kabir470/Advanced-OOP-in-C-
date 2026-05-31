@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagerConsoleApp.Classes
 {
-    abstract class SalaryAbstract
+    public abstract class SalaryAbstract
     {
-        private int salary;
+        public int salary;
         public int Salary
         {
             get { return salary; }
@@ -20,6 +20,6 @@ namespace EmployeeManagerConsoleApp.Classes
         {
             return Salary / 10;
         }
-        public abstract void CalculateSalary();
+        public abstract int CalculateSalary(int ivalue, int salary);
     }
 }

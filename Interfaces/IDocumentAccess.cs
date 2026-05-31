@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagerConsoleApp.Interfaces
 {
-    interface IDocumentAdminAccess
+    public interface IDocumentAdminAccess
     {
-        void CreateDocument();
+        string CreateDocument(string documentName);
         void DeleteDocument();
         void UpdateDocument();
         void ReadDocument();
 
     }
-    interface IDocumentAccessEmpolyeeAccess
+    public interface IDocumentAccessEmployeeAccess
     {
         void ReadDocumentEmployee();
 

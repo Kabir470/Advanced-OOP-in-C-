@@ -11,7 +11,8 @@ namespace EmployeeManagerConsoleApp.Interfaces
         int employeeID { get; set; }
         string Name { get; set; }
         string Position { get; set; }
-        int Salary { get; set; }
-        
+        string Bonus { get; set; }
+
+
     }
 }
