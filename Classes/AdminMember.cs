@@ -10,12 +10,14 @@ namespace EmployeeManagerConsoleApp.Classes
 {
     public class AdminMember : SalaryAbstract, IDocumentAdminAccess, IAddEmployee
     {
+        public string? testName;
         private string AName = "Kabir daddy";
         public string AdminName
         {
             get { return AName; }
             set { AName = value; }
         }
+
         public int employeeID { get ; set ; }
         public string? Name { get ; set ; }
         public string? Position { get ; set ; }
