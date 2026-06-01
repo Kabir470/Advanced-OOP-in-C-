@@ -6,16 +6,23 @@ namespace EmployeeManagerConsoleApp
     {
         static void Main(string[] args)
         {
-            AdminMember admin = new AdminMember();
+            List<AdminMember>admin= new List<AdminMember>();
             Documents document = new Documents();
             Employee employee = new Employee();
-            HrDept hr = new HrDept();
+            //HrDept hr = new HrDept("hr namecheck", "hr admincheck", 0);
             NoticeBoard noticeBoard = new NoticeBoard();
 
-            admin.testName = "Admin1";
-            Console.WriteLine($"Test Name: {admin.testName}");
+
+            admin.Add(new AdminMember("admin namecheck", "admin agecheck", 0));
+            admin.Add(new AdminMember("admin namecheck2", "admin agecheck2", 0));
 
 
+            //print the list of admin members
+            Console.WriteLine("List of Admin Members:");
+            foreach (var adminMember in admin)
+            {
+                Console.WriteLine($"Admin Name: {adminMember.namecheck}, Admin Age: {adminMember.admincheck}");
+            }
             //admin.salary = 50000;
             //for (int i = 0; i < 3; i++)
             //{

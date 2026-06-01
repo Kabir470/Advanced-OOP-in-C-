@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagerConsoleApp.Classes
 {
-    public class Documents : IDocumentAdminAccess, IDocumentAccessEmployeeAccess
+    public class Documents : AdminMember, IDocumentAdminAccess, IDocumentAccessEmployeeAccess
     {
+        public Documents() : base("namecheck", "admincheck", 0)
+        {
+        }
         public string CreateDocument(string documentName)
         {
             Console.WriteLine($"admin created a document: {documentName}");

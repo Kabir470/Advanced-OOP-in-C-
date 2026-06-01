@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,13 +11,21 @@ namespace EmployeeManagerConsoleApp.Classes
 {
     public class AdminMember : SalaryAbstract, IDocumentAdminAccess, IAddEmployee
     {
-        public string? testName;
-        private string AName = "Kabir daddy";
-        public string AdminName
+       
+        private string namecheck, admincheck;
+        private int agecheck;
+        public AdminMember(string namecheck, string admincheck, int agecheck)
         {
-            get { return AName; }
-            set { AName = value; }
+            this.namecheck = namecheck;
+            this.admincheck = admincheck;
+            this.agecheck= agecheck;
+
         }
+
+        
+
+
+        
 
         public int employeeID { get ; set ; }
         public string? Name { get ; set ; }
