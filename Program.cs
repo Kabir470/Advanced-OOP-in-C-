@@ -12,16 +12,29 @@ namespace EmployeeManagerConsoleApp
             //HrDept hr = new HrDept("hr namecheck", "hr admincheck", 0);
             NoticeBoard noticeBoard = new NoticeBoard();
 
+            
+            Console.Write("Enter the number of admin members: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine($"Enter details for admin member {i + 1}:");
+                Console.Write($"Enter name for check {i + 1}: ");
+                string? namecheck= Console.ReadLine();
+                Console.Write($"Enter admin for check {i + 1}: ");
+                string? admincheck = Console.ReadLine();
+                Console.Write($"Enter age for check {i + 1}: ");
+                int agecheck = Convert.ToInt32(Console.ReadLine());
+                admin.Add(new AdminMember(namecheck, admincheck, agecheck));
+            }
 
-            admin.Add(new AdminMember("admin namecheck", "admin agecheck", 0));
-            admin.Add(new AdminMember("admin namecheck2", "admin agecheck2", 0));
 
 
             //print the list of admin members
             Console.WriteLine("List of Admin Members:");
-            foreach (var adminMember in admin)
+            
+            foreach (var amem in admin)
             {
-                Console.WriteLine($"Admin Name: {adminMember.namecheck}, Admin Age: {adminMember.admincheck}");
+                amem.printcheck();
             }
             //admin.salary = 50000;
             //for (int i = 0; i < 3; i++)

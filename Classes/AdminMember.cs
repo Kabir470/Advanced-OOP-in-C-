@@ -12,9 +12,9 @@ namespace EmployeeManagerConsoleApp.Classes
     public class AdminMember : SalaryAbstract, IDocumentAdminAccess, IAddEmployee
     {
        
-        private string namecheck, admincheck;
+        private string? namecheck, admincheck;
         private int agecheck;
-        public AdminMember(string namecheck, string admincheck, int agecheck)
+        public AdminMember(string? namecheck, string? admincheck, int agecheck)
         {
             this.namecheck = namecheck;
             this.admincheck = admincheck;
@@ -23,7 +23,10 @@ namespace EmployeeManagerConsoleApp.Classes
         }
 
         
-
+        public void printcheck()
+        {
+                       Console.WriteLine($"Admin Name: {namecheck} ----Admin Position: {admincheck} ----Admin Age: {agecheck}");
+        }
 
         
 
